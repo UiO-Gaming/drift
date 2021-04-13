@@ -18,7 +18,7 @@ function processEmails() {
 
 function sendToDiscord(sender) {
   var discordPayload = {
-    content: '<@267415183931080715> <@170506717140877312> Ny e-post i styremail! E-posten er fra: ' + sender
+    content: '<@267415183931080715> <@170506717140877312> Ny e-post fra: ' + sender
   }
   UrlFetchApp.fetch(webhookUrl', {
     method: 'post',
