@@ -4,7 +4,7 @@ Ulike scripts og konfigurasjoner for drift av UiO Gaming sine tjenester
 
 ## Oversikt
 
-I skrivende stund avhenger UiO Gaming sine tjenester på disse leverandørene
+I skrivende stund er UiO Gaming sine tjenester avhengig av disse leverandørene:
 
 * Domeneshop - Domenet uiogaming.no
 * Sanity.io - Drift av backend for nettsiden
