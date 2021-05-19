@@ -30,4 +30,4 @@
 
 ## Andre ting å merke seg
 
-Alle domener og subdomener knyttet til UiO Gaming er i skrivende støtter og skal støtte HTTPS. Certbot brukes for øyeblikket til å utgi og fornye SSL sertifikater.
+Alle domener og subdomener knyttet til UiO Gaming støtter og skal støtte HTTPS. Certbot brukes for øyeblikket til å utgi og fornye SSL-sertifikater.
