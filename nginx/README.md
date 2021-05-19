@@ -6,7 +6,7 @@
 
 `dev.uiogaming.no` -> UiO Gaming frontend for evt. testing
 
-`admin.uiogaming.no` -> [UiO Gaming backend](https://github.com/UiO-Gaming/uiogaming-website/tree/main/studio) (Ikke i bruk for øyeblikket)
+~~`admin.uiogaming.no` -> [UiO Gaming backend](https://github.com/UiO-Gaming/uiogaming-website/tree/main/studio)~~ (Ikke i bruk for øyeblikket)
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
@@ -24,10 +24,10 @@
 
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
-`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server
+~~`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server~~ (Ikke i bruk for øyeblikket)
 
 `cs.uiogaming.no` -> UiO Gaming sin Counter-Strike: Global Offensive scrim server
 
 ## Andre ting å merke seg
 
-Alle domener og subdomener knyttet til UiO Gaming er i skrivende støtter og skal støtte HTTPS. Certbot brukes for øyeblikket til å utgit og fornye SSL sertifikater.
+Alle domener og subdomener knyttet til UiO Gaming er i skrivende støtter og skal støtte HTTPS. Certbot brukes for øyeblikket til å utgi og fornye SSL sertifikater.
