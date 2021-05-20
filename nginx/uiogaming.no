@@ -35,11 +35,7 @@ server {
 
 server {
 	server_name admin.uiogaming.no;
-	location / {
-		proxy_set_header Host $host;
-		proxy_pass http://127.0.0.1:3333;
-		proxy_redirect off;
-	}
+	rewrite ^/(.*)$ https://uiogaming.sanity.studio;
 
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/admin.uiogaming.no/fullchain.pem; # managed by Certbot
