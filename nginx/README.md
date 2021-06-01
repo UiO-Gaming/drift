@@ -10,6 +10,8 @@
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
+`innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
+
 `discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discord-server
 
 `instagram.uiogaming.no` -> Omdirigerer til UiO Gaming sin Instagram-profil

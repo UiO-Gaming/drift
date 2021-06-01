@@ -78,6 +78,19 @@ server {
 }
 
 server {
+	server_name innmelding.uiogaming.no;
+	rewrite ^/(.*)$ https://forms.gle/agMV9xXDnEy16NyZ7;
+
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/innmelding.uiogaming.no/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/innmelding.uiogaming.no/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
 	server_name discord.uiogaming.no;
 	rewrite ^/(.*)$ https://discord.gg/PqsgXbnds4;
 
@@ -393,6 +406,20 @@ server {
 
 
 	server_name api.uiogaming.no;
+    listen 80;
+    return 404; # managed by Certbot
+
+
+}
+
+
+server {
+    if ($host = innmelding.uiogaming.no) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+	server_name innmelding.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
 
