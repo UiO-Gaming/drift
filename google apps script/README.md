@@ -16,3 +16,6 @@ Oppgave: Sende melding på Discord hver gang en ny e-post kommer inn i inboks. D
 Utløses: Ved skjemainnsending.
 
 Oppgaeve: Sende melding til Discord hver gang noen sender inn et innmeldingsskjema. Da kan vi fortest mulig verifisere om personen har betalt medlemskontigent og legge dem inn i medlemsregisteret.
+
+![image](https://user-images.githubusercontent.com/24893890/122639348-a3e41500-d0f9-11eb-8a9f-c1ad4c7d829a.png)
+
