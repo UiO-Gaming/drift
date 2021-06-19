@@ -14,3 +14,5 @@ Oppgave: Sende melding på Discord hver gang en ny e-post kommer inn i inboks. D
 ### `onSubmit()`
 
 Utløses: Ved skjemainnsending.
+
+Oppgaeve: Sende melding til Discord hver gang noen sender inn et innmeldingsskjema. Da kan vi fortest mulig verifisere om personen har betalt medlemskontigent og legge dem inn i medlemsregisteret.
