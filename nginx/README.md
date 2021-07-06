@@ -6,7 +6,7 @@
 
 `dev.uiogaming.no` -> UiO Gaming frontend for evt. testing
 
-~~`admin.uiogaming.no` -> [UiO Gaming backend](https://github.com/UiO-Gaming/uiogaming-website/tree/main/studio)~~ (Ikke i bruk for øyeblikket)
+`admin.uiogaming.no` -> Omdirigerer til [UiO Gaming backend](https://github.com/UiO-Gaming/uiogaming.no/tree/main/studio)
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
