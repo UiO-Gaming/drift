@@ -1,5 +1,5 @@
 /* 
-Goes through all emails labeled with "Send til Discord" and sends a message to discord through discord webhooks
+Iterates through all emails labeled with "Send til Discord" and sends a message to discord through discord webhooks
 */
 
 var webhookUrl = 'yeet'; // Insert your webhook url here
