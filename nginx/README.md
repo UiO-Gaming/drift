@@ -12,6 +12,10 @@
 
 `innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
 
+`betaling.uiogaming.no` -> Omdirigerer til vippsbetaling for medlemsavgift
+
+`pay.uiogaming.no` -> Omdirigerer til betalingstjenesten stripe for betaling av medlemsavgift
+
 `discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discord-server
 
 `instagram.uiogaming.no` -> Omdirigerer til UiO Gaming sin Instagram-profil
@@ -26,7 +30,7 @@
 
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
-~~`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server~~ (Ikke i bruk for øyeblikket)
+`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server
 
 `cs.uiogaming.no` -> UiO Gaming sin Counter-Strike: Global Offensive scrim server
 

@@ -21,7 +21,7 @@ server {
 	server_name dev.uiogaming.no;
 	location / {
 		proxy_set_header Host $host;
-		proxy_pass http://127.0.0.1:8001;
+		proxy_pass http://192.168.0.15:8000;
 		proxy_redirect off;
 	}
 
@@ -85,6 +85,32 @@ server {
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/innmelding.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/innmelding.uiogaming.no/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
+	server_name betal.uiogaming.no;
+	rewrite ^/(.*)$ https://qr.vipps.no/28/2/05/031/aewLDciYp;
+
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/betal.uiogaming.no/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/betal.uiogaming.no/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
+        server_name pay.uiogaming.no;
+        rewrite ^/(.*)$ https://buy.stripe.com/14kdSp0UpbETgJqaEE;
+
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/betal.uiogaming.no/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/betal.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
@@ -179,6 +205,23 @@ server {
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/admin.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/admin.uiogaming.no/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
+	server_name webhooks.uiogaming.no;
+	location / {
+		proxy_set_header Host $host;
+		proxy_pass http://127.0.0.1:4242;
+		proxy_redirect off;
+	}
+
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/webhooks.uiogaming.no/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/webhooks.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
@@ -420,6 +463,47 @@ server {
 
 
 	server_name innmelding.uiogaming.no;
+    listen 80;
+    return 404; # managed by Certbot
+
+
+}
+
+
+server {
+    if ($host = webhooks.uiogaming.no) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+	server_name webhooks.uiogaming.no;
+    listen 80;
+    return 404; # managed by Certbot
+
+
+}
+
+
+server {
+    if ($host = betal.uiogaming.no) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+	server_name betal.uiogaming.no;
+    listen 80;
+    return 404; # managed by Certbot
+
+
+}
+
+server {
+    if ($host = pay.uiogaming.no) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        server_name pay.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
 
