@@ -10,6 +10,8 @@
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
+`bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra brus- og pizzakalkulator
+
 `innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
 
 `betaling.uiogaming.no` -> Omdirigerer til vippsbetaling for medlemsavgift
