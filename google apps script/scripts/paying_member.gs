@@ -2,15 +2,15 @@
 Sends a message to discord whenever a form is submitted.
 */
 
-var webhookUrl = 'yeet'; // Insert your webhook url here
+var webhookUrl = "yeet"; // Insert your webhook url here
 
 function onSubmit(e) {
   var discordPayload = {
-    content: 'Nytt betalende medlem! <@267415183931080715> <@280753175340908546> <@170506717140877312>'
-  }
+    content: "Nytt betalende medlem!",
+  };
   UrlFetchApp.fetch(webhookUrl, {
-    method: 'post',
+    method: "post",
     payload: JSON.stringify(discordPayload),
-    contentType: 'application/json'
-  })
+    contentType: "application/json",
+  });
 }
