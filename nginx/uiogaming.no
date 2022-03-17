@@ -13,8 +13,6 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-
 }
 
 server {
@@ -30,7 +28,6 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/admin.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
@@ -41,13 +38,11 @@ server {
 		proxy_redirect off;
 	}
 
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/api.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/api.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
@@ -58,13 +53,11 @@ server {
 		proxy_redirect off;
 	}
 
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/bebbes.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/bebbes.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
@@ -76,7 +69,6 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/admin.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }	
 
 server {
@@ -91,46 +83,28 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/admin.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
 	server_name innmelding.uiogaming.no;
 	rewrite ^/(.*)$ https://forms.gle/agMV9xXDnEy16NyZ7;
 
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/innmelding.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/innmelding.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
-	server_name betal.uiogaming.no;
-	rewrite ^/(.*)$ https://qr.vipps.no/28/2/05/031/aewLDciYp;
-
+    server_name pay.uiogaming.no;
+    rewrite ^/(.*)$ https://buy.stripe.com/14kdSp0UpbETgJqaEE;
 
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/betal.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/betal.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
-}
-
-server {
-        server_name pay.uiogaming.no;
-        rewrite ^/(.*)$ https://buy.stripe.com/14kdSp0UpbETgJqaEE;
-
-
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/betal.uiogaming.no/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/betal.uiogaming.no/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
@@ -142,73 +116,61 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/admin.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
 	server_name instagram.uiogaming.no;
 	rewrite ^/(.*)$ https://instagram.com/uio_gaming;
 
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/facebook.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/facebook.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
-        server_name github.uiogaming.no;
-        rewrite ^/(.*)$ https://github.com/UiO-Gaming;
-
+    server_name github.uiogaming.no;
+    rewrite ^/(.*)$ https://github.com/UiO-Gaming;
 
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/facebook.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/facebook.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
-
 server {
-        server_name twitch.uiogaming.no;
-        rewrite ^/(.*)$ https://twitch.tv/uio_gaming;
-
+    server_name twitch.uiogaming.no;
+    rewrite ^/(.*)$ https://twitch.tv/uio_gaming;
 
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/facebook.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/facebook.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
 	server_name youtube.uiogaming.no;
 	rewrite ^/(.*)$ https://www.youtube.com/channel/UCZhUhWT_q0oZGk0rCeov51Q;
 
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/facebook.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/facebook.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
 	server_name facebook.uiogaming.no;
 	rewrite ^/(.*)$ https://www.facebook.com/UiO-Gaming-113445760510985;
 
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/facebook.uiogaming.no/fullchain.pem; # managed by Certbot
     ssl_certificate_key /etc/letsencrypt/live/facebook.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
@@ -224,7 +186,6 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/admin.uiogaming.no/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-
 }
 
 server {
@@ -234,7 +195,6 @@ server {
 		proxy_pass http://127.0.0.1:4242;
 		proxy_redirect off;
 	}
-
 
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/webhooks.uiogaming.no/fullchain.pem; # managed by Certbot
@@ -285,12 +245,9 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	listen 80;
 	server_name admin.uiogaming.no;
     return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -298,12 +255,9 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	listen 80;
 	server_name cs.uiogaming.no;
     return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -311,12 +265,9 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	listen 80;
 	server_name dev.uiogaming.no;
     return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -324,12 +275,9 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	listen 80;
 	server_name discord.uiogaming.no;
     return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -337,12 +285,9 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	listen 80;
 	server_name kart.uiogaming.no;
     return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -350,12 +295,9 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	listen 80;
 	server_name mc.uiogaming.no;
     return 404; # managed by Certbot
-
-
 }	
 
 server {
@@ -363,46 +305,35 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	listen 80;
 	server_name vedtekter.uiogaming.no;
     return 404; # managed by Certbot
+}
 
-
-}server {
+server {
     if ($host = www.uiogaming.no) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
     if ($host = uiogaming.no) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
-
 
 	listen 80;
 	listen [::]:80;
 
 	server_name uiogaming.no www.uiogaming.no;
     return 404; # managed by Certbot
-
-
-
-
 }
-
 
 server {
     if ($host = facebook.uiogaming.no) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	server_name facebook.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -410,12 +341,9 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
-        server_name github.uiogaming.no;
+    server_name github.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -423,26 +351,19 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	server_name instagram.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
-
 
 server {
     if ($host = twitch.uiogaming.no) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
-        server_name twitch.uiogaming.no;
+    server_name twitch.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -450,68 +371,39 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	server_name youtube.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
-
 
 server {
     if ($host = api.uiogaming.no) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	server_name api.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
-
 
 server {
     if ($host = innmelding.uiogaming.no) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	server_name innmelding.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
-
 
 server {
     if ($host = webhooks.uiogaming.no) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	server_name webhooks.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
-}
-
-
-server {
-    if ($host = betal.uiogaming.no) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-	server_name betal.uiogaming.no;
-    listen 80;
-    return 404; # managed by Certbot
-
-
 }
 
 server {
@@ -520,23 +412,17 @@ server {
     } # managed by Certbot
 
 
-        server_name pay.uiogaming.no;
+    server_name pay.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }
-
 
 server {
     if ($host = bebbes.uiogaming.no) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
 	server_name bebbes.uiogaming.no;
     listen 80;
     return 404; # managed by Certbot
-
-
 }

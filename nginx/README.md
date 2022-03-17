@@ -8,13 +8,15 @@
 
 `admin.uiogaming.no` -> Omdirigerer til [UiO Gaming backend](https://github.com/UiO-Gaming/uiogaming.no-backend)
 
+`api.uiogaming.no` -> Gatsby rebuild trigger endpoint
+
+`webhooks.uiogaming.no` -> Webhook endpoint for mottagelse av Stripnotifikasjoner
+
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
 `bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra brus- og pizzakalkulator
 
 `innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
-
-`betaling.uiogaming.no` -> Omdirigerer til vippsbetaling for medlemsavgift
 
 `pay.uiogaming.no` -> Omdirigerer til betalingstjenesten stripe for betaling av medlemsavgift
 
@@ -32,7 +34,7 @@
 
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
-`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server
+~~`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server~~ (ikke i bruk lenger)
 
 `cs.uiogaming.no` -> UiO Gaming sin Counter-Strike: Global Offensive scrim server
 
