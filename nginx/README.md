@@ -22,15 +22,15 @@
 
 `discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discord-server
 
-`instagram.uiogaming.no` -> Omdirigerer til UiO Gaming sin Instagram-profil
+`instagram.uiogaming.no` -> Omdirigerer til UiO Gaming sin Instagramkonto
 
-`github.uiogaming.no` -> Omdirigerer til UiO Gaming sin GitHub-profil
+`github.uiogaming.no` -> Omdirigerer til UiO Gaming sin GitHub
 
-`twitch.uiogaming.no` -> Omdirigerer til UiO Gaming sin Twitch-kanal
+`twitch.uiogaming.no` -> Omdirigerer til UiO Gaming sin Twitchkanal
 
-`youtube.uiogaming.no` -> Omdirigerer til UiO Gaming sin YouTube-kanal
+`youtube.uiogaming.no` -> Omdirigerer til UiO Gaming sin YouTubekanal
 
-`facebook.uiogaming.no` -> Omdirigerer til UiO Gaming sin Facebook-side
+`facebook.uiogaming.no` -> Omdirigerer til UiO Gaming sin Facebookside
 
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
