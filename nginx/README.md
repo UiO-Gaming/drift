@@ -20,7 +20,7 @@
 
 `pay.uiogaming.no` -> Omdirigerer til betalingstjenesten stripe for betaling av medlemsavgift
 
-`discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discord-server
+`discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discordserver
 
 `instagram.uiogaming.no` -> Omdirigerer til UiO Gaming sin Instagramkonto
 
