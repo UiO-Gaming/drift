@@ -34,9 +34,7 @@
 
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
-~~`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server~~ (ikke i bruk lenger)
-
-`cs.uiogaming.no` -> UiO Gaming sin Counter-Strike: Global Offensive scrim server
+`refusjon.uiogaming.no` -> UiO Gaming internt refusjonsskjema
 
 ## Andre ting å merke seg
 
