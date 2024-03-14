@@ -14,6 +14,12 @@
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
+`statutes.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter (engelsk overseettelser)
+
+`laws.uiogaming.no` -> Omdirigerer til `statutes.uiogaming.no`
+
+`rules.uiogaming.no` -> Omdirigerer til `statutes.uiogaming.no`
+
 `bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra brus- og pizzakalkulator
 
 `innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
