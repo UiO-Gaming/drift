@@ -24,6 +24,12 @@
 
 `innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
 
+`join.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
+
+`klage.uiogaming.no` -> Omdirigerer til klageskjema
+
+`complaint.uiogaming.no` -> Omdirigerer til klageskjema
+
 `pay.uiogaming.no` -> Omdirigerer til betalingstjenesten stripe for betaling av medlemsavgift
 
 `discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discordserver
