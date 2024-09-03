@@ -2,15 +2,23 @@
 
 ## Ruting
 
+### Nettsider & Tjenester
+
 `uiogaming.no` & `www.uiogaming.no` -> [UiO Gaming frontend](https://github.com/UiO-Gaming/uiogaming.no)
 
-`dev.uiogaming.no` -> UiO Gaming frontend for evt. testing
+`dev.uiogaming.no` -> UiO Gaming frontend for evt. testing. Ikke alltid i bruk.
 
 `admin.uiogaming.no` -> Omdirigerer til [UiO Gaming backend](https://github.com/UiO-Gaming/uiogaming.no-backend)
 
 `api.uiogaming.no` -> Gatsby rebuild trigger endpoint
 
 `webhooks.uiogaming.no` -> Webhook endpoint for mottagelse av Stripnotifikasjoner
+
+`bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra [brus- og pizzakalkulator](https://github.com/UiO-Gaming/bebbes)
+
+`inforskjerm.uiogaming.no` -> Vår instans av [Infoscreen3](https://github.com/reaby/infoscreen3/). Brukes som presentasjonsverktøy.
+
+### Dokumenter
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
@@ -20,9 +28,7 @@
 
 `rules.uiogaming.no` -> Omdirigerer til `statutes.uiogaming.no`
 
-`bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra [brus- og pizzakalkulator](https://github.com/UiO-Gaming/bebbes)
-
-`inforskjerm.uiogaming.no` -> Vår instans av [Infoscreen3](https://github.com/reaby/infoscreen3/). Brukes som presentasjonsverktøy.
+### Skjemaer
 
 `innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
 
@@ -32,7 +38,15 @@
 
 `complaint.uiogaming.no` -> Omdirigerer til `klage.uiogaming.no`
 
-`pay.uiogaming.no` -> Omdirigerer til betalingstjenesten stripe for betaling av medlemsavgift
+`refusjon.uiogaming.no` -> UiO Gaming internt refusjonsskjema
+
+### Spillservere
+
+`mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
+
+`cs.uiogaming.no` -> UiO Gaming sin Counter-Strike 2 server
+
+### Sosiale medier
 
 `discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discordserver
 
@@ -48,11 +62,9 @@
 
 `tiktok.uiogaming.no` -> Omdirigerer til UiO Gaming sin TikTok
 
-`mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
+### Annet
 
-`cs.uiogaming.no` -> UiO Gaming sin Counter-Strike 2
-
-`refusjon.uiogaming.no` -> UiO Gaming internt refusjonsskjema
+`pay.uiogaming.no` -> Omdirigerer til betalingstjenesten stripe for betaling av medlemsavgift
 
 ## Andre ting å merke seg
 
