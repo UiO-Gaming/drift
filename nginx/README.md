@@ -22,6 +22,8 @@
 
 `bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra [brus- og pizzakalkulator](https://github.com/UiO-Gaming/bebbes)
 
+`inforskjerm.uiogaming.no` -> Vår instans av [Infoscreen3](https://github.com/reaby/infoscreen3/). Brukes som presentasjonsverktøy.
+
 `innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
 
 `join.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
