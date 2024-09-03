@@ -46,6 +46,8 @@
 
 `facebook.uiogaming.no` -> Omdirigerer til UiO Gaming sin Facebookside
 
+`tiktok.uiogaming.no` -> Omdirigerer til UiO Gaming sin TikTok
+
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
 `refusjon.uiogaming.no` -> UiO Gaming internt refusjonsskjema
