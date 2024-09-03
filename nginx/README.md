@@ -50,6 +50,8 @@
 
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
+`cs.uiogaming.no` -> UiO Gaming sin Counter-Strike 2
+
 `refusjon.uiogaming.no` -> UiO Gaming internt refusjonsskjema
 
 ## Andre ting å merke seg
