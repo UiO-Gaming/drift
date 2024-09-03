@@ -20,7 +20,7 @@
 
 `rules.uiogaming.no` -> Omdirigerer til `statutes.uiogaming.no`
 
-`bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra brus- og pizzakalkulator
+`bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra [brus- og pizzakalkulator](https://github.com/UiO-Gaming/bebbes)
 
 `innmelding.uiogaming.no` -> Omdirigerer til innmeldingsskjema for UiO Gaming
 
