@@ -66,6 +66,10 @@
 
 `pay.uiogaming.no` -> Omdirigerer til betalingstjenesten stripe for betaling av medlemsavgift
 
+`status.uiogaming.no` ligger ikke i nginx-konfigurasjonen da denne rutes til `kuma.furumo.eu` gjennom DNS. Det er fortsatt verdt å nevne at dette subdomenet eksisterer. Siden det ikke er vits å ha en uptime montior på samme server som tjenesten den monitorerer ligger på har vi lagt den her.
+
+`kuma.uiogaming.no` -> [Uptime Kuma](https://github.com/louislam/uptime-kuma) som overvåker tjenester som ligger på `furumo.eu`. Det vil si at disse to serverene monitorerer hverandre.
+
 ## Andre ting å merke seg
 
 Alle domener og subdomener knyttet til UiO Gaming støtter og skal støtte HTTPS. Certbot brukes for øyeblikket til å utgi og fornye SSL-sertifikater.
