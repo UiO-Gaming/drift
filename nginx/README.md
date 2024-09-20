@@ -74,4 +74,4 @@
 
 Alle domener og subdomener knyttet til UiO Gaming støtter og skal støtte HTTPS. Certbot brukes for øyeblikket til å utgi og fornye SSL-sertifikater.
 
-Leander Furumo på sin server på `furumo.eu` håndterer sertifikatet for `status.uiogaming.no`
+Leander Furumo sin server på `furumo.eu` håndterer sertifikatet for `status.uiogaming.no`
