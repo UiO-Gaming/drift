@@ -22,7 +22,7 @@
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
-`statutes.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter (engelsk overseettelser)
+`statutes.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter (engelsk oversettelse)
 
 `laws.uiogaming.no` -> Omdirigerer til `statutes.uiogaming.no`
 
