@@ -178,10 +178,12 @@ I tillegg ligger det ymse andre ting som sakspapirer fra generalforsamlinger og 
 ## Hvordan "lage" et subdomene, f.eks yeet.uiogaming.no?
 
 ### 1. Registrer domenet hos domeneshop
-Logg deg inn på domeneshop og naviger til administrasjonssiden for DNS-pekere. Tykke så på "Vis avanserte instillinger". 
+Logg deg inn på domeneshop og naviger til administrasjonssiden for DNS-pekere. Tykke så på "Vis avanserte instillinger".
+
 ![Pasted image 20241022203038](https://github.com/user-attachments/assets/eb3d7996-c498-440f-9a8f-7fbb3977913c)
 
 Bla så nederst til du finner et blankt felt. Der vil du skrive inn subdomenet, i dette tilfellet *yeet*, velge CNAME som type og peke mot *uiogaming.no*
+
 ![Pasted image 20241022203314](https://github.com/user-attachments/assets/d77cd5a5-1b93-4f6c-8fb0-6e31bd8aa7e3)
 
 Trykk så på `+`-ikonet.
@@ -195,6 +197,7 @@ Så kan du kopiere en serverblokk fra ønsket format. Dette kommer an på hva du
 - vedtekter.uiogaming.no om du skal vise returnere et dokument som f.eks en PDF
 
 I dette eksemplet tar vi utgangspunkt i det første
+
 ![Pasted image 20241022204155](https://github.com/user-attachments/assets/30814c66-fec3-4305-a56b-f34562aa29da)
 
 Her er det viktig å **ikke** kopiere med delen som er merket med kommentaren *managed by Certbot* da dette vil automatisk genereres senere.
@@ -229,6 +232,7 @@ Har du behov for å overføre filer til servermaskinen kan du gjøre det gjennom
 > Ikke bruk FileZilla til å endre kode for applikasjoner vi kjører! Vennligst gjør dette gjennom git i stedet!
 
 Her er et eksempel på hvordan du kobler deg til.
+
 ![Pasted image 20241022205050](https://github.com/user-attachments/assets/68713f57-c1a7-4cd0-98ac-c59a9a25bf24)
 
 ## Vedlikehold av servermaskinen
