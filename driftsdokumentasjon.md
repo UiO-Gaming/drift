@@ -125,6 +125,7 @@ Entur sin *Tavla* viser informasjon om kollektivtrafikktilbudet i nærheten. Den
 Her er det ikke så mye å si. Det er vår egenutviklede pizza- og bruskalkulator. Mest laget for moroskyld og bør kanskje ikke tas kjempeseriøst. Den sikter seg egentlig inn på at alle skal få 3 pizzastykker og 0.5 liter brus hver.
 
 [bebbes.uiogaming.no](https://bebbes.uiogaming.no)
+
 [Kode](https://github.com/UiO-Gaming/bebbes)
 
 ## stripe-webhook-api
