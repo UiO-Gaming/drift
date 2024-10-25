@@ -39,7 +39,7 @@ Her foretrekker jeg å peke deg mot dokumentasjonen til nginx om man er usikker 
 Men i korte trekk så er dette viktig å vite:
 - Ruting for domenet *uiogaming.no* ligger i filen `/etc/nginx/sites-available/uiogaming.no`
 - Alle rutinger bruker en global konfigurasjonsfil. Denne ligger på `/etc/nginx/global/global.conf`. Sørg for at denne brukes når en ny rute lages.
-- Ved endring av konfigurasjonsfil. Sørg for å kjøre kommandoen `nginx -t`, og hvis den ikke klager på noe, kjør så `sudo systemctl restart nginx`
+- Ved endring av konfigurasjonsfil. Sørg for å kjøre kommandoen `sudo nginx -t`, og hvis den ikke klager på noe, kjør så `sudo systemctl restart nginx`
 
 > [!NOTE]
 > Nginx sine Konfigurasjonsfiler må redigeres som superbruker. Du må med andre ord skrive `sudo` foran kommandoen.
