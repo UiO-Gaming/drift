@@ -50,9 +50,9 @@ Men i korte trekk så er dette viktig å vite:
 ## Brannmur
 Vi bruker [ufw](https://en.wikipedia.org/wiki/Uncomplicated_Firewall) til å håndtere brannmurregler. I prinsippet blokkerer vi all trafikk som ikke er nødvendig og må derfor åpne opp hvis vi skal ha noe tilgjengelig for omverdenen.
 
-Det skal derimot nevnes at det meste som trengs rutes gjennom [Nginx](#Nginx%20-%20Ruting%20av%20nettrafikk). Med andre ord trenger man bare portene for Nginx, altså 80 og 443, åpne. Det er lett å eksponere noe man ikke ønsker på denne måten så det er viktig å passe seg for denne fallgruven.
+Det skal derimot nevnes at det meste som trengs rutes gjennom [Nginx](#nginx---ruting-av-nettrafikk). Med andre ord trenger man bare portene for Nginx, altså 80 og 443, åpne. Det er lett å eksponere noe man ikke ønsker på denne måten så det er viktig å passe seg for denne fallgruven.
 
-[Docker](#Docker%20-%20Programvare%20for%20å%20kjøre%20applikasjoner) gjør også noe tull med brannmuren som gjør at ting åpnes selv om det tilsynelatende ikke ser sånn ut. Dette bør gjøres noe med. Jeg (Leander Furumo) har ordnet dette på min egen server hjemme så jeg kan eventuelt spørres om dette hvis jeg fortsatt er tilstede. Om ikke er Google og EDB-gjengen din venn.
+[Docker](#docker---programvare-for-å-kjøre-applikasjoner) gjør også noe tull med brannmuren som gjør at ting åpnes selv om det tilsynelatende ikke ser sånn ut. Dette bør gjøres noe med. Jeg (Leander Furumo) har ordnet dette på min egen server hjemme så jeg kan eventuelt spørres om dette hvis jeg fortsatt er tilstede. Om ikke er Google og EDB-gjengen din venn.
 
 Les gjerne om *ufw* på egenhånd.
 
@@ -66,12 +66,12 @@ Hver applikasjon har gjerne en `docker-compose.yml` fil i sin mappe. Denne defin
 Greit å lese seg opp mer på egenhånd om man er usikker her.
 
 Følgende applikasjoner kjører ikke som en Docker-container i skrivende stund:
-- [Nginx](#Nginx%20-%20Ruting%20av%20nettrafikk)
-- [Nettsiden](#uiogaming.no%20-%20Nettsiden) + tilhørende Webhook-API (Dette bør fikses i fremtiden)
+- [Nginx](#nginx---ruting-av-nettrafikk)
+- [Nettsiden](#uiogamingno---nettsiden) + tilhørende Webhook-API (Dette bør fikses i fremtiden)
 - [Spillservere](#Spillservere)
 
 ## Postgresql - Databasen
-Mange applikasjoner har behov for en database, og til det kjører vi en sentral [Postgres](https://www.postgresql.org/)-instans gjennom [Docker](#Docker%20-%20Programvare%20for%20%C3%A5%20kj%C3%B8re%20applikasjoner). Denne bør passes godt på da det ligger mye data her. Man kan administrere den gjennom et kommandolinjeverktøy som f.eks [psql](https://www.postgresql.org/docs/current/app-psql.html) eller gjennom grafisk grensesnitt med f.eks [pgAdmin](https://www.pgadmin.org/). Disse er begge installert på servermaskinen.
+Mange applikasjoner har behov for en database, og til det kjører vi en sentral [Postgres](https://www.postgresql.org/)-instans gjennom [Docker](#docker---programvare-for-å-kjøre-applikasjoner). Denne bør passes godt på da det ligger mye data her. Man kan administrere den gjennom et kommandolinjeverktøy som f.eks [psql](https://www.postgresql.org/docs/current/app-psql.html) eller gjennom grafisk grensesnitt med f.eks [pgAdmin](https://www.pgadmin.org/). Disse er begge installert på servermaskinen.
 
 > [!IMPORTANT]
 > Per dags dato er backupløsningen av denne alt for dårlig. Dette må gjøres noe med.
@@ -95,13 +95,13 @@ Den gangen da nettsiden ble skrevet var ikke rammeverk som *Next.js* like promin
 > Dette er tilsynelatende ikke et problem lenger, men er noe en bør være obs på likevel.
 
 ## Mustafa - Discord Bot
-Mustafa, også kjent som [uiogaming-bot](https://github.com/UiO-Gaming/uiogaming-bot), er vår Discordbot som gjør alt mellom himmel og jord. Mest fjas og kjas. Den har derimot noen viktige funksjoner som er verdt å nevne.
+[Mustafa](https://github.com/UiO-Gaming/mustafa) er vår Discordbot som gjør alt mellom himmel og jord. Mest fjas og kjas. Den har derimot noen viktige funksjoner som er verdt å nevne.
 
 Mustafa har f.eks en "cog", som tar seg av sykronisering av arrangementer lagt ut på Discord over til nettsiden. Dette gjør at styret har en mindre plattform av de 100 som finnes å forholde seg til.
 
 Botten er eneste programmet på denne listen som automatisk deployes når man pusher til main branch på GitHub. Dette håper jeg på at kan utvides til alle tjenester i fremtiden.
 
-Når foreningen får ny teknisk ansvarlig bør de inviteres til UiO Gaming sin organisasjon på [developers.discord.com](https://developers.discord.com)
+Når foreningen får ny teknisk ansvarlig bør de inviteres til UiO Gaming sin organisasjon på [discord.com/developers](https://discord.com/developers)
 
 ## Infoskjerm
 Infoskjermen finner man på [infoskjerm.uiogaming.no](https://infoskjerm.uiogaming.no). Dette er en instans av [infoscreen3](https://github.com/reaby/infoscreen3/). Her kan man logge på som *admin* eller som *viewer*. Passord for begge disse ligger der man finner passord.  
@@ -240,7 +240,7 @@ Her er et eksempel på hvordan du kobler deg til.
 ### Programvare
 Vedlikehold av servermaskinen går stort sett ut på å sørge for at ting holder oppdatert. Det er satt opp automatiske sikkerhetsoppdateringer gjennom det som heter [unattended-upgrades](https://wiki.debian.org/UnattendedUpgrades), men dette gjelder bare operativsystemet og pakkene som kjører direkte på den.
 
-Derfor er det viktig å også oppdatere [Docker](#Docker%20-%20Programvare%20for%20%C3%A5%20kj%C3%B8re%20applikasjoner)-bildene som kjører på maskinen. Det kan gjøres slik:
+Derfor er det viktig å også oppdatere [Docker](#docker---programvare-for-å-kjøre-applikasjoner)-bildene som kjører på maskinen. Det kan gjøres slik:
 1. Beveg deg inn i mappen til applikasjonen som skal oppdateres
 2. Kjør `docker compose pull`
 3. Kjør `docker compose restart`
@@ -256,6 +256,6 @@ TODO
 # Rutiner
 - Endre passord for alle tjenester ved styrebytte
 - Sjekke tilganger til f.eks GitHub, Google drive og Discord ved styrebytte
-- Laste opp og oppdatere sakspapirer samt vedtekter ved generalforsamling. [Se guide](#Oppdatere%20vedtekter)
-- [Vedlikehold av servermaskinen](#Vedlikehold%20av%20servermaskinen)
+- Laste opp og oppdatere sakspapirer samt vedtekter ved generalforsamling. [Se guide](#oppdatere-vedtekter)
+- [Vedlikehold av servermaskinen](#vedlikehold-av-servermaskinen)
 - Holde denne dokumentasjonen oppdatert? :)
