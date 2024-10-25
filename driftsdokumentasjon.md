@@ -63,6 +63,9 @@ Hver applikasjon har gjerne en `docker-compose.yml` fil i sin mappe. Denne defin
 - `docker compose up` for å starte
 - `docker compose down` for å stoppe
 
+> [!TIP]
+> Legg til `-d` på slutten av `docker compose up` for å unngå at programmet stopper når du lukker terminalen
+
 Greit å lese seg opp mer på egenhånd om man er usikker her.
 
 Følgende applikasjoner kjører ikke som en Docker-container i skrivende stund:
