@@ -106,8 +106,6 @@ Denne instansen bor på [umami.uiogaming.no](https://umami.uiogaming.no)
 
 Mustafa har f.eks en "cog", som tar seg av sykronisering av arrangementer lagt ut på Discord over til nettsiden. Dette gjør at styret har en mindre plattform av de 100 som finnes å forholde seg til.
 
-Botten er eneste programmet på denne listen som automatisk deployes når man pusher til main branch på GitHub. Dette håper jeg på at kan utvides til alle tjenester i fremtiden.
-
 Når foreningen får ny teknisk ansvarlig bør de inviteres til UiO Gaming sin organisasjon på [discord.com/developers](https://discord.com/developers)
 
 ## Infoskjerm
@@ -180,6 +178,13 @@ Google Scripts sin syntaks er eldgammel Javascript med noen ymse tillegg.
 [GitHub](https://github.com/UiO-Gaming) er plattformen vi legger koden til all egenutviklet programvare på. Dette skal også gjøres i fremtiden med mindre det er et særskilt behov for å ikke gjøre det. Jeg kan ikke se for meg noen tilfeller.
 
 I tillegg ligger det ymse andre ting som sakspapirer fra generalforsamlinger og vedtekter. Dette er på eget insj fra meg (Leander Furumo) da jeg ønsker at slike dokumenter skal ligge offentlig og være versjonskontrollert. Jeg stoler heller ikke på at dette er en oppgave styret klarer selv så da har jeg tatt saken i egne hender. Håper på at noen vil føre tradisjonen videre dersom jeg ikke er til stede lenger. Derfor bør jeg legge instruksjoner om detaljer rundt det her en eller annen gang. Men det blir ikke nå :)
+
+# Automatisk deployment
+Det er satt opp automatisk deployment for enkelte applikasjoner. Hver gang det pushes til *main* branch på GitHub vil det kjøres en GitHub Action som logger seg på gjennom SSH og utfører kommandoene den trenger for å oppdatere tjenesten. Dette gjøres gjennom brukeren `github_deploy`.
+
+I skrivende stund fungerer dette for følgende tjenester:
+- [Mustafa](#mustafa---discord-bot)
+- [Mustaboard](#mustaboard)
 
 # Nyttige guider
 
