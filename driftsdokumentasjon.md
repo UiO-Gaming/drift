@@ -76,10 +76,9 @@ Følgende applikasjoner kjører ikke som en Docker-container i skrivende stund:
 ## Postgresql - Databasen
 Mange applikasjoner har behov for en database, og til det kjører vi en sentral [Postgres](https://www.postgresql.org/)-instans gjennom [Docker](#docker---programvare-for-å-kjøre-applikasjoner). Denne bør passes godt på da det ligger mye data her. Man kan administrere den gjennom et kommandolinjeverktøy som f.eks [psql](https://www.postgresql.org/docs/current/app-psql.html) eller gjennom grafisk grensesnitt med f.eks [pgAdmin](https://www.pgadmin.org/). Disse er begge installert på servermaskinen.
 
-> [!IMPORTANT]
-> Per dags dato er backupløsningen av denne alt for dårlig. Dette må gjøres noe med.
-
 Når en ny tjeneste skal gis tilgang til databasen anbefaler jeg å lage en ny bruker som bare har tilgang til databasen den skal ha, samt minimale tilganger til denne.
+
+Backup av denne kjøres hver natt i cron job til mappa `/home/uiogaming/Documents/backups/postgres`. Denne mappa tas så backup av med *rsync* til Leander Furumo sin personlige server off site. Dette gjøres gjennom brukeren `rsync`.
 
 ## uiogaming.no - Nettsiden
 [Nettsiden](https://github.com/UiO-Gaming/uiogaming.no) består av 2 deler (eller 3, kommer an på hvordan du teller). Det er:
