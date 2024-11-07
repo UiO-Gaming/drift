@@ -18,6 +18,8 @@
 
 `inforskjerm.uiogaming.no` -> Vår instans av [Infoscreen3](https://github.com/reaby/infoscreen3/). Brukes som presentasjonsverktøy.
 
+`mustaboard.uiogaming.no` -> Vår egenutviklede infoskjerm. Er en av tingene som vises på overnevnte `infoskjerm.uiogaming.no`.
+
 `umami.uiogaming.no` -> Vår instans av [Umami](https://github.com/umami-software/umami).
 
 ### Dokumenter
