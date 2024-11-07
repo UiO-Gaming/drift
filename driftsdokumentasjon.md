@@ -97,6 +97,11 @@ Den gangen da nettsiden ble skrevet var ikke rammeverk som *Next.js* like promin
 > Tidligere var det et problem der hele serveren kræsjet når man endret på rekkefølgen til styremedlemmer på nettsiden. Dette trolig fordi man trigget hundrevis av rebuilds i løpet av noen få sekunder, noe serveren ikke klarte å håndtere. Løsning har dermed vært å stoppe prosessen for webhook-APIet i *htop* eller lignende, gjøre endringene, for å så starte det igjen.
 > Dette er tilsynelatende ikke et problem lenger, men er noe en bør være obs på likevel.
 
+## Umami - Statistikk for nettsiden
+[Umami](https://github.com/umami-software/umami) er et alternativ til Google Analytics, som samler inn litt metadata om besøknde på [nettsiden]((#uiogamingno---nettsiden)). Er det noe vi trenger? Absolutt ikke! Men det er jo litt kult og interessant. Denne hoster vi selv i en [Docker](#docker---programvare-for-å-kjøre-applikasjoner) container så det er litt mer uskyldig enn å sende overvåkningsinfo til O' store Google.
+
+Denne instansen bor på [umami.uiogaming.no](https://umami.uiogaming.no)
+
 ## Mustafa - Discord Bot
 [Mustafa](https://github.com/UiO-Gaming/mustafa) er vår Discordbot som gjør alt mellom himmel og jord. Mest fjas og kjas. Den har derimot noen viktige funksjoner som er verdt å nevne.
 

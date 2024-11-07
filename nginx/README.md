@@ -18,6 +18,8 @@
 
 `inforskjerm.uiogaming.no` -> Vår instans av [Infoscreen3](https://github.com/reaby/infoscreen3/). Brukes som presentasjonsverktøy.
 
+`umami.uiogaming.no` -> Vår instans av [Umami](https://github.com/umami-software/umami).
+
 ### Dokumenter
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
