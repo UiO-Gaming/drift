@@ -26,6 +26,8 @@
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
 
+`lov.uiogaming.no` -> Omdirigerer til `vedtekter.uiogaming.no`
+
 `statutes.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter (engelsk oversettelse)
 
 `laws.uiogaming.no` -> Omdirigerer til `statutes.uiogaming.no`
@@ -50,6 +52,8 @@
 
 `cs.uiogaming.no` -> UiO Gaming sin Counter-Strike 2 server
 
+`cs-admin.uiogaming.no` -> Web-GUI adminpanel for Counter-Strik 2 serven. Instans av [WebRcon](https://github.com/forewing/webrcon-server)
+
 ### Sosiale medier
 
 `discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discordserver
@@ -73,6 +77,8 @@
 `status.uiogaming.no` ligger ikke i nginx-konfigurasjonen da denne rutes til `kuma.furumo.eu` gjennom DNS. Det er fortsatt verdt å nevne at dette subdomenet eksisterer. Siden det ikke er vits å ha en uptime montior på samme server som tjenesten den monitorerer ligger på har vi lagt den her.
 
 `kuma.uiogaming.no` -> [Uptime Kuma](https://github.com/louislam/uptime-kuma) som overvåker tjenester som ligger på `furumo.eu`. Det vil si at disse to serverene monitorerer hverandre.
+
+`liveleak.uiogaming.no` -> Fordi inside jokes er morsomme. Returnerer en GIF.
 
 ## Andre ting å merke seg
 
