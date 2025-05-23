@@ -18,7 +18,7 @@ Serveren er koblet til en dedikert port på nettverksswitchen som står på kont
 ## SSH - Fjernstyring av servermaskinen
 Det er mulig å nå denne maskinen fjernstyrt gjennom SSH. Det kan gjøres ved å skrive inn følgende kommando i en terminal:
 ```
-ssh uiogaming@uiogmaing.no
+ssh uiogaming@uiogaming.no
 ```
 
 Du blir så bedt om å skrive inn passordet. Dette finner du sammen med alle andre passord. 
