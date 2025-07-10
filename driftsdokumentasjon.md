@@ -219,8 +219,10 @@ Det er satt opp automatisk deployment for enkelte applikasjoner. Hver gang det p
 
 I skrivende stund fungerer dette for følgende tjenester:
 
+- [Bebbes](#bebbes---pizzakalkulator)
 - [Mustafa](#mustafa---discord-bot)
 - [Mustaboard](#mustaboard)
+- [name-100-uio-gamers](#name-100-uio-gamers)
 
 # Nyttige guider
 
