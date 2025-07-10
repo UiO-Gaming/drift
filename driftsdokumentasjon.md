@@ -190,8 +190,6 @@ Et web-spill hvor man skal prøve å gjette seg fram til et satt antall UiO Game
 
 Standard framgangsmåte for å lage et nytt subdomene er å lage en CNAME-record som peker til uiogaming.no. [Se guide](Hvordan%20%22lage%22%20et%20subdomene%2C%20f.eks%20yeet.uiogaming.no%3F)
 
-BILDE HER
-
 # Sanity
 
 [Sanity](https://www.sanity.io/) er et CMS (Content management system) som vi bruker til å redigere utvalgt innhold på nettsiden. Det gir først og fremst et brukervennlig grensesnitt for non-tech nerds til å for eksempel endre bilde og beskrivelse på styremedlemmer osv.
