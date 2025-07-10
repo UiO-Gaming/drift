@@ -172,6 +172,14 @@ Det viktige å nevne her er at UiO Gaming hoster status nettside for meg (Leande
 
 Spillservere setter man opp litt etter behov. Vi har som regel en minecraftserver liggende til enhver tid som _ikke_ kjører på Docker pga. problemer med ustabilitet. Det er også satt opp en Counter-Strike 2 server, men denne er kronglete å bruker per nå.
 
+## name-100-uio-gamers
+
+Et web-spill hvor man skal prøve å gjette seg fram til et satt antall UiO Gamere så fort som mulig. Den krever at brukeren er logget inn med Discordbrukeren sin og har rollen for betalende medlemmer. Man kan bare gjette Discordbruker- og kallenavn, og den godtar bare andre betalende medlemmer.
+
+[name100.uiogaming.no](https://name100.uiogaming.no)
+
+[Kode](https://github.com/UiO-Gaming/name-100-uio-gamers)
+
 # Domeneshop
 
 [Domeneshop](https://domene.shop) er der vi har registrert domenet vårt, _uiogaming.no_, hos. Det er også her vi administrerer domenet samt videresending av e-post som går dit.
