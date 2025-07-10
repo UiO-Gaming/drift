@@ -50,6 +50,8 @@
 
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
+`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server
+
 `cs.uiogaming.no` -> UiO Gaming sin Counter-Strike 2 server
 
 `cs-admin.uiogaming.no` -> Web-GUI adminpanel for Counter-Strik 2 serven. Instans av [WebRcon](https://github.com/forewing/webrcon-server)
