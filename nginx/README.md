@@ -22,6 +22,10 @@
 
 `umami.uiogaming.no` -> Vår instans av [Umami](https://github.com/umami-software/umami).
 
+`ha.uiogaming.no` -> En instans av [HomeAssistant](https://github.com/home-assistant)
+
+`name100.uiogaming.no` -> Et web-spill der man skal gjette et satt antall Discordbruker- og kallenavn på UiO Gamere så fort som mulig. [Repo](https://github.com/UiO-Gaming/name-100-uio-gamers)
+
 ### Dokumenter
 
 `vedtekter.uiogaming.no` -> Returnerer UiO Gaming sine nåværende vedtekter
