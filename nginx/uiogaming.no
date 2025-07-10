@@ -446,7 +446,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://www.youtube.com/channel/UCZhUhWT_q0oZGk0rCeov51Q;
+	return 301 https://www.youtube.com/@uiogamingyt;
 
 
 
