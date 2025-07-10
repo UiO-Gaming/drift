@@ -151,6 +151,10 @@ Her er det ikke så mye å si. Det er vår egenutviklede pizza- og bruskalkulato
 
 [Kode](https://github.com/UiO-Gaming/bebbes)
 
+## Home Assistant
+
+TBD
+
 ## stripe-webhook-api
 
 Denne tjenesten sender melding på discord når man har mottatt en betaling i [Stripe](https://stripe.com). Vi bruker Stripe til å motta betaling fra folk som ikke har Vipps.
