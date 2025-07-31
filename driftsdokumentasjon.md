@@ -79,7 +79,6 @@ Greit å lese seg opp mer på egenhånd om man er usikker her.
 Følgende applikasjoner kjører ikke som en Docker-container i skrivende stund:
 
 - [Nginx](#nginx---ruting-av-nettrafikk)
-- [Nettsiden](#uiogamingno---nettsiden) + tilhørende Webhook-API (Dette bør fikses i fremtiden)
 - [Spillservere](#Spillservere)
 
 ## Postgresql - Databasen
@@ -92,21 +91,14 @@ Backup av denne kjøres hver natt i cron job til mappa `/home/uiogaming/Document
 
 ## uiogaming.no - Nettsiden
 
-[Nettsiden](https://github.com/UiO-Gaming/uiogaming.no) består av 2 deler (eller 3, kommer an på hvordan du teller). Det er:
+[Nettsiden](https://github.com/UiO-Gaming/uiogaming.no) består av 2 deler. Det er:
 
 - Frontend
-- Webhook-API
 - Backend
 
 Sistnevnte står det mer om [her](#Sanity).
 
-Siden nettsiden er laget med [Gatsby.js](https://www.gatsbyjs.com/) så er alle sidene statiske. Det vil si at man må bygge de på nytt hver gang man endrer på innhold. Derfor har man [webhook-APIet](https://github.com/UiO-Gaming/uiogaming.no/tree/main/webhook-api) som tar i mot meldinger fra backenden når innhold endrer seg og bygger nettsiden på nytt.
-
-Den gangen da nettsiden ble skrevet var ikke rammeverk som _Next.js_ like prominente. Derfor ble det en slik rar løsning for å sikre best mulig SEO (search engine optimization). Nettsiden bør kanskje migreres i fremtiden.
-
-> [!CAUTION]
-> Tidligere var det et problem der hele serveren kræsjet når man endret på rekkefølgen til styremedlemmer på nettsiden. Dette trolig fordi man trigget hundrevis av rebuilds i løpet av noen få sekunder, noe serveren ikke klarte å håndtere. Løsning har dermed vært å stoppe prosessen for webhook-APIet i _htop_ eller lignende, gjøre endringene, for å så starte det igjen.
-> Dette er tilsynelatende ikke et problem lenger, men er noe en bør være obs på likevel.
+Nettsiden inkluderer et webhook API som gjør at nettsiden holder seg oppdatert med siste info når ting endrer seg i backend. Dette blir cachet derimot så det kan ta litt tid før det dukker opp.
 
 ## Umami - Statistikk for nettsiden
 
@@ -221,6 +213,7 @@ Det er satt opp automatisk deployment for enkelte applikasjoner. Hver gang det p
 
 I skrivende stund fungerer dette for følgende tjenester:
 
+- [uiogaming.no](#uiogamingno---nettsiden)
 - [Bebbes](#bebbes---pizzakalkulator)
 - [Mustafa](#mustafa---discord-bot)
 - [Mustaboard](#mustaboard)
