@@ -58,9 +58,16 @@ Vi bruker [ufw](https://en.wikipedia.org/wiki/Uncomplicated_Firewall) til å hå
 
 Det skal derimot nevnes at det meste som trengs rutes gjennom [Nginx](#nginx---ruting-av-nettrafikk). Med andre ord trenger man bare portene for Nginx, altså 80 og 443, åpne. Det er lett å eksponere noe man ikke ønsker på denne måten så det er viktig å passe seg for denne fallgruven.
 
+Eksempelvis kjører minecraft på port `25565` og må dermed eksplisitt åpnes
+`sudo ufw allow 25565`
+
 [Docker](#docker---programvare-for-å-kjøre-applikasjoner) gjør også noe tull med brannmuren som gjør at ting åpnes selv om det tilsynelatende ikke ser sånn ut. Dette bør gjøres noe med. Jeg (Leander Furumo) har ordnet dette på min egen server hjemme så jeg kan eventuelt spørres om dette hvis jeg fortsatt er tilstede. Om ikke er Google og EDB-gjengen din venn.
 
-Les gjerne om _ufw_ på egenhånd.
+Du kan kjøre
+`sudo ufw status numbered` for å se hvilke porter vi lar komme gjennom
+`sudo ufw allow <PORTNUMMER>` for å åpne en port
+
+Les gjerne mer om _ufw_ på egenhånd da jeg ikke gidder å skrive noe mer :)
 
 ## Docker - Programvare for å kjøre applikasjoner
 
