@@ -10,9 +10,7 @@
 
 `admin.uiogaming.no` -> Omdirigerer til [UiO Gaming backend](https://github.com/UiO-Gaming/uiogaming.no-backend)
 
-`api.uiogaming.no` -> Gatsby rebuild trigger endpoint
-
-`webhooks.uiogaming.no` -> Webhook endpoint for mottagelse av Stripnotifikasjoner
+`api.uiogaming.no` -> Ikke i bruk. Tidligere endepunkt for å trigge rebuilds av nettside.
 
 `bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra [brus- og pizzakalkulator](https://github.com/UiO-Gaming/bebbes)
 
@@ -54,12 +52,6 @@
 
 `mc.uiogaming.no` -> UiO Gaming sin Minecraft-server
 
-`kart.uiogaming.no` -> Dynmap (Minecraft world map på nett) for UiO Gaming sin Minecraft-server
-
-`cs.uiogaming.no` -> UiO Gaming sin Counter-Strike 2 server
-
-`cs-admin.uiogaming.no` -> Web-GUI adminpanel for Counter-Strik 2 serven. Instans av [WebRcon](https://github.com/forewing/webrcon-server)
-
 ### Sosiale medier
 
 `discord.uiogaming.no` -> Omdirigerer til invitasjonslenke for UiO Gaming sin Discordserver
@@ -77,8 +69,6 @@
 `tiktok.uiogaming.no` -> Omdirigerer til UiO Gaming sin TikTok
 
 ### Annet
-
-`pay.uiogaming.no` -> Omdirigerer til betalingstjenesten stripe for betaling av medlemsavgift
 
 `status.uiogaming.no` ligger ikke i nginx-konfigurasjonen da denne rutes til `kuma.furumo.eu` gjennom DNS. Det er fortsatt verdt å nevne at dette subdomenet eksisterer. Siden det ikke er vits å ha en uptime montior på samme server som tjenesten den monitorerer ligger på har vi lagt den her.
 
