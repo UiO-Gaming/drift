@@ -152,16 +152,18 @@ Her er det ikke så mye å si. Det er vår egenutviklede pizza- og bruskalkulato
 
 ## Home Assistant
 
-TBD
+Ligger på [ha.uiogaming.no](https://ha.uiogaming.no) og er en instans vi bruker for å koble til døråpnerene våre. Her kan du styre de manuelt.
 
-## stripe-webhook-api
+## sesame
 
-Denne tjenesten sender melding på discord når man har mottatt en betaling i [Stripe](https://stripe.com). Vi bruker Stripe til å motta betaling fra folk som ikke har Vipps.
+Discordbot laget av Mathias Morsund. Den tar seg om åpning og lukking av dørene. Siden dette er hans greie har jeg ikke noe mer å dokumentere per nå. Det er heller ikke open source
+
+## stripe-webhook-api (Deprecated)
+
+Denne tjenesten sender melding på discord når man har mottatt en betaling i [Stripe](https://stripe.com). Vi brukte dette for et par tilfeller i fortiden, men nå har vi en kortterminal man kan ta imot betaling på. Derfor er denne deprecated 
 
 [Kode](https://github.com/UiO-Gaming/stripe-webhook-api)
 
-> [!WARNING]
-> De siste årene har man heller oppfordret til betaling i fysiske sedler/mynter. Man kan i praksis ta ned denne og avvikle bruken av stripe helt sånn det er i dag.
 
 ## Uptime-kuma - Statusnettside
 
@@ -173,7 +175,7 @@ Det viktige å nevne her er at UiO Gaming hoster status nettside for meg (Leande
 
 ## Spillservere
 
-Spillservere setter man opp litt etter behov. Vi har som regel en minecraftserver liggende til enhver tid som _ikke_ kjører på Docker pga. problemer med ustabilitet. Det er også satt opp en Counter-Strike 2 server, men denne er kronglete å bruker per nå.
+Spillservere setter man opp litt etter behov. Vi har som regel en minecraftserver liggende til enhver tid som _ikke_ kjører på Docker pga. problemer med ustabilitet. Det er verdt å prøve dockerløsning igjen i fremtiden.
 
 ## name-100-uio-gamers
 
@@ -318,7 +320,13 @@ Kan være lurt å børste støv av maskinen en gang i blant :) (både inni og ut
 
 ## Oppdatere vedtekter
 
-TODO
+Vedtektsdokumentene er laget med LaTeX og finnes [her](https://github.com/UiO-Gaming/dokumenter/tree/main/styrende%20dokumenter/vedtekter). Jeg liker ikke helt filstrukturen her, men det er et forsøk på å skille mellom norsk og engelsk, samt hva som er gamle og gjeldene vedtekter.
+
+Fordi jeg er veldig nøye på metadata, som ingen egentlig bryr seg om, så foretrekker jeg å gjøre denne prosessen på egenhånd. Så lenge filnavnene som legges ut på GitHub er konsekvente derimot så er jeg fornøyd. Husk også å bruke datoen til den relevante generalforsamlingen på både forsiden samt filnavnene.
+
+Jeg hadde tenkt til å lage et script som automatiserer denne prosessen, men per d.d har ikke dette skjedd.
+
+Vedtektsfilene som man finner på [vedtekter.uiogaming.no](https://vedtekter.uiogaming.no) og [statutes.uiogaming.no](https://statutes.uiogaming.no) ligger i `/var/www/uiogaming.no/vedtekter`. Merk at filene må hete `vedtekter.pdf` og `statutes.pdf` for å fungere.
 
 # Rutiner
 
