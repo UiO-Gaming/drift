@@ -2,7 +2,7 @@
 
 Ulike scripts og konfigurasjoner for drift av UiO Gaming sine tjenester.
 
-Sjekk ut [driftsdokumentasjonen](driftsdokumentasjon.md) for en mer utfyllende info.
+Sjekk ut [driftsdokumentasjonen](driftsdokumentasjon.md) for mer utfyllende info.
 
 ## Oversikt
 
