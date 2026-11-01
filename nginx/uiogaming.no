@@ -24,7 +24,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://uiogaming.no;
+	return 301 https://uiogaming.no$request_uri;
 
 
     listen 443 ssl; # managed by Certbot
@@ -276,7 +276,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://statutes.uiogaming.no;
+	return 301 https://statutes.uiogaming.no$request_uri;
 
 
     listen 443 ssl; # managed by Certbot
@@ -292,7 +292,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://statutes.uiogaming.no;
+	return 301 https://statutes.uiogaming.no$request_uri;
 
 
     listen 443 ssl; # managed by Certbot
@@ -325,7 +325,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://innmelding.uiogaming.no;
+	return 301 https://innmelding.uiogaming.no$request_uri;
 
 
     listen 443 ssl; # managed by Certbot
@@ -357,7 +357,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://klage.uiogaming.no;
+	return 301 https://klage.uiogaming.no$request_uri;
 
 
     listen 443 ssl; # managed by Certbot
@@ -546,7 +546,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://vedtekter.uiogaming.no;
+	return 301 https://vedtekter.uiogaming.no$request_uri;
 
 
     listen 443 ssl; # managed by Certbot
