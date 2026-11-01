@@ -8,10 +8,11 @@ Sjekk ut [driftsdokumentasjonen](driftsdokumentasjon.md) for mer utfyllende info
 
 I skrivende stund er UiO Gaming sine tjenester avhengig av disse leverandørene:
 
-* Domeneshop - Domenet uiogaming.no og e-postserver for adresser som tilhører domenet
-* Sanity.io - Drift av backend for nettsiden
-* Google - E-post og interne dokumenter samt for pålogging til andre tjenester.
-* Vipps - Betalingsportal for medlemsavgift
+- Domeneshop - Domenet uiogaming.no og e-postserver for adresser som tilhører domenet
+- Sanity.io - Drift av backend for nettsiden
+- Google - E-post og interne dokumenter samt for pålogging til andre tjenester.
+- Vipps - Betalingsportal for medlemsavgift
+- GitHub - Kode for all egenutviklet programvare, samt automatisk deployment gjennom GitHub Actions
 
 Alle andre tjenester er driftet av foreningen selv på sin egen servermaskin. Dette for å minimere kostnader og økt fleksibilitet for egne konfigurasjoner.
 Vi vil jobbe for å sammenslå flest mulige tjenester slik at det er mer oversiktlig og tilgjengelig for styrets medlemmer.
