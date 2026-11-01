@@ -14,4 +14,4 @@ I skrivende stund er UiO Gaming sine tjenester avhengig av disse leverandørene:
 * Vipps - Betalingsportal for medlemsavgift
 
 Alle andre tjenester er driftet av foreningen selv på sin egen servermaskin. Dette for å minimere kostnader og økt fleksibilitet for egne konfigurasjoner.
-Vi vil jobbe for å sammenslå flest mulige tjenster slik at det er mer oversiktlig og tilgjengelig for styrets medlemmer.
+Vi vil jobbe for å sammenslå flest mulige tjenester slik at det er mer oversiktlig og tilgjengelig for styrets medlemmer.

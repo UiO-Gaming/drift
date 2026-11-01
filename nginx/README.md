@@ -14,7 +14,7 @@
 
 `bebbes.uiogaming.no` -> UiO Gaming sin hjemmesnekra [brus- og pizzakalkulator](https://github.com/UiO-Gaming/bebbes)
 
-`inforskjerm.uiogaming.no` -> Vår instans av [Infoscreen3](https://github.com/reaby/infoscreen3/). Brukes som presentasjonsverktøy.
+`infoskjerm.uiogaming.no` -> Vår instans av [Infoscreen3](https://github.com/reaby/infoscreen3/). Brukes som presentasjonsverktøy.
 
 `mustaboard.uiogaming.no` -> Vår egenutviklede infoskjerm. Er en av tingene som vises på overnevnte `infoskjerm.uiogaming.no`.
 
@@ -70,7 +70,7 @@
 
 ### Annet
 
-`status.uiogaming.no` ligger ikke i nginx-konfigurasjonen da denne rutes til `kuma.furumo.eu` gjennom DNS. Det er fortsatt verdt å nevne at dette subdomenet eksisterer. Siden det ikke er vits å ha en uptime montior på samme server som tjenesten den monitorerer ligger på har vi lagt den her.
+`status.uiogaming.no` ligger ikke i nginx-konfigurasjonen da denne rutes til `kuma.furumo.eu` gjennom DNS. Det er fortsatt verdt å nevne at dette subdomenet eksisterer. Siden det ikke er vits å ha en uptime monitor på samme server som tjenesten den monitorerer ligger på har vi lagt den her.
 
 `kuma.uiogaming.no` -> [Uptime Kuma](https://github.com/louislam/uptime-kuma) som overvåker tjenester som ligger på `furumo.eu`. Det vil si at disse to serverene monitorerer hverandre.
 
