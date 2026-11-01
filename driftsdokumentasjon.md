@@ -284,13 +284,13 @@ I skrivende stund fungerer dette for følgende tjenester:
 
 Workflowen (`.github/workflows/deploy.yml`) er lik i alle repoene og henter innloggingsinfo fra GitHub sine _secrets_ og _variables_. De fleste av disse er satt på organisasjonsnivå, under _Settings → Secrets and variables → Actions_ for [UiO-Gaming](https://github.com/UiO-Gaming), og deles av alle repoene:
 
-| Navn              | Type     | Nivå         | Innhold                                                  |
-| ----------------- | -------- | ------------ | -------------------------------------------------------- |
-| `SSH_PRIVATE_KEY` | Secret   | Organisasjon | Privat SSH-nøkkel for `github_deploy`                    |
-| `SSH_USER`        | Secret   | Organisasjon | Brukernavnet, altså `github_deploy`                      |
-| `SSH_HOST`        | Variable | Organisasjon | `uiogaming.no`                                           |
-| `MAIN_BRANCH`     | Variable | Organisasjon | `main`                                                   |
-| `WORK_DIR`        | Secret   | Repo         | Mappen applikasjonen ligger i på servermaskinen          |
+| Navn              | Type     | Nivå         | Innhold                                         |
+| ----------------- | -------- | ------------ | ----------------------------------------------- |
+| `SSH_PRIVATE_KEY` | Secret   | Organisasjon | Privat SSH-nøkkel for `github_deploy`           |
+| `SSH_USER`        | Secret   | Organisasjon | Brukernavnet, altså `github_deploy`             |
+| `SSH_HOST`        | Variable | Organisasjon | `uiogaming.no`                                  |
+| `MAIN_BRANCH`     | Variable | Organisasjon | `main`                                          |
+| `WORK_DIR`        | Secret   | Repo         | Mappen applikasjonen ligger i på servermaskinen |
 
 Den offentlige delen av SSH-nøkkelen ligger i `~/.ssh/authorized_keys` til `github_deploy` på servermaskinen. Byttes nøkkelen må begge stedene oppdateres, men bare én gang siden den deles av alle repoene.
 
