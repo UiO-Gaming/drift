@@ -389,7 +389,7 @@ Derfor er det viktig å også oppdatere [Docker](#docker---programvare-for-å-kj
 
 **Applikasjoner vi har laget selv** (f.eks uiogaming.no, Mustafa og bebbes) bygges fra kildekoden med `build: .` i `docker-compose.yml`. Her gjør `docker compose pull` ingenting. De fleste av disse oppdateres av seg selv gjennom [automatisk deployment](#automatisk-deployment) hver gang noe pushes til _main_. Må du gjøre det manuelt kan du kjøre `git pull && docker compose up -d --build` i mappen til applikasjonen.
 
-Selv om automatiske sikkerhetsoppdateringer er på så kan det være lurt å kjøre `sudo apt update && sudo apt upgrade` til ymse tider. Merk deg at om Docker er en av pakkene som oppdateres her, så vil alle containere stoppe automatisk. Det bør fikses på slik at disse starter opp igjen automatisk.
+Selv om automatiske sikkerhetsoppdateringer er på så kan det være lurt å kjøre `sudo apt update && sudo apt upgrade && sudo apt autoremove` samt `sudo snap refresh` til ymse tider. Merk deg at om Docker er en av pakkene som oppdateres her, så vil alle containere stoppe automatisk. Det bør fikses på slik at disse starter opp igjen automatisk
 
 ### Fysisk
 
