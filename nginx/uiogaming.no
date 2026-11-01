@@ -42,7 +42,7 @@ server {
 	
 	location / {
 		proxy_set_header Host $host;
-		proxy_pass http://127.0.0.1:9002;
+		proxy_pass http://127.0.0.1:9001;
 		proxy_redirect off;
 	}
 
@@ -83,7 +83,7 @@ server {
 	location / {
 		proxy_set_header Host $host;
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		proxy_pass http://127.0.0.1:3000;
+		proxy_pass http://127.0.0.1:3333;
 		proxy_redirect off;
 	}
 
@@ -144,7 +144,7 @@ server {
 
 	location / {
 		proxy_set_header Host $host;
-		proxy_pass http://158.36.190.233:8000;
+		proxy_pass http://127.0.0.1:8000;
 		proxy_redirect off;
 	}
 
@@ -276,7 +276,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://statutes.uiogaming.no$request_uri;
+	return 301 https://statutes.uiogaming.no;
 
 
     listen 443 ssl; # managed by Certbot
@@ -292,7 +292,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://statutes.uiogaming.no$request_uri;
+	return 301 https://statutes.uiogaming.no;
 
 
     listen 443 ssl; # managed by Certbot
@@ -325,7 +325,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://innmelding.uiogaming.no$request_uri;
+	return 301 https://innmelding.uiogaming.no;
 
 
     listen 443 ssl; # managed by Certbot
@@ -341,7 +341,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 302 https://docs.google.com/forms/d/e/1FAIpQLSfinPnTd993oEMH1Pu52lnP1LRcacGqegOfdP4-hHv1vASn1A/viewform;
+	return 301 https://docs.google.com/forms/d/e/1FAIpQLSfinPnTd993oEMH1Pu52lnP1LRcacGqegOfdP4-hHv1vASn1A/viewform;
 
 
     listen 443 ssl; # managed by Certbot
@@ -357,7 +357,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://klage.uiogaming.no$request_uri;
+	return 301 https://klage.uiogaming.no;
 
 
     listen 443 ssl; # managed by Certbot
@@ -373,7 +373,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 302 https://discord.gg/PqsgXbnds4;
+	return 301 https://discord.gg/PqsgXbnds4;
 
 
     listen 443 ssl; # managed by Certbot
@@ -480,26 +480,6 @@ server {
 }
 
 server {
-	server_name mc.uiogaming.no;
-
-	# Global config
-        include global/global.conf;
-
-	location / {
-		proxy_set_header Host $host;
-		proxy_pass http://127.0.0.1:25565;
-		proxy_redirect off;
-	}
-
-
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/mc.uiogaming.no/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/mc.uiogaming.no/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-}
-
-server {
 	server_name refusjon.uiogaming.no;
 	
 	# Global config
@@ -546,7 +526,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://vedtekter.uiogaming.no$request_uri;
+	return 301 https://vedtekter.uiogaming.no;
 
 
     listen 443 ssl; # managed by Certbot
