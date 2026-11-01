@@ -119,6 +119,17 @@ Denne instansen bor på [umami.uiogaming.no](https://umami.uiogaming.no)
 
 Mustafa har f.eks en "cog", som tar seg av synkronisering av arrangementer lagt ut på Discord over til nettsiden. Dette gjør at styret har en mindre plattform av de 100 som finnes å forholde seg til.
 
+### Hva Mustafa er avhengig av
+
+Mustafa kjører i Docker med `network_mode: host`, altså på samme nettverk som servermaskinen. Det gjør at den når databasen og Minecraft-serveren på `localhost`. Den trenger følgende for å fungere fullt ut:
+
+- **[Postgres](#postgresql---databasen)** - Bursdager, gullkorn, Minecraft-whitelist, stjernetavla, streaks og en del annet lagres her. Botten lager tabellene selv så lenge brukeren den får har tilgang til databasen.
+- **Minecraft RCON** - Whitelist-kommandoene kobler til [Minecraft-serveren](#spillservere) på `127.0.0.1:25575`. Minecraft-serveren må derfor kjøre på samme maskin. Denne porten skal **ikke** åpnes i [brannmuren](#brannmur), da RCON gir full kontroll over serveren.
+- **Sanity API-token** - Brukes til å synkronisere arrangementer til [nettsiden](#sanity).
+- **Galtinn API-token** - Brukes av `/galtinn medlemskap` for å sjekke medlemskap i DNS.
+
+Alt dette fylles inn i `src/config/config.yaml`. Mangler noe av det, skrus funksjonene som trenger det av når botten starter, mens resten fungerer som normalt. Merk at konfigurasjonsfilen kopieres inn i bildet når det bygges, så etter en endring må du kjøre `docker compose up -d --build`.
+
 Når foreningen får ny teknisk ansvarlig bør de inviteres til UiO Gaming sin organisasjon på [discord.com/developers](https://discord.com/developers)
 
 ## Infoskjerm
