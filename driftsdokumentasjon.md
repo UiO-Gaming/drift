@@ -107,6 +107,14 @@ Sistnevnte står det mer om [her](#sanity).
 
 Nettsiden inkluderer et webhook API som gjør at nettsiden holder seg oppdatert med siste info når ting endrer seg i backend. Dette blir cachet derimot så det kan ta litt tid før det dukker opp.
 
+### Webhook fra Sanity
+
+Nettsiden cacher innhold fra Sanity i 30-60 minutter. For at endringer skal dukke opp med en gang, sender Sanity en melding til nettsiden hver gang noe publiseres. Dette er satt opp som et webhook i [Sanity sitt dashbord](https://www.sanity.io/manage) under _API → Webhooks_.
+
+Verdien til `secret` på slutten av _URL_-feltet til webhooket (`?secret=...`) må være lik `SANITY_REVALIDATE_SECRET` i `.env`-filen til nettsiden på servermaskinen. Om disse ikke stemmer overens svarer nettsiden med `401`, og endringer dukker først opp når cachen går ut. Du kan se om webhooket feiler under _Attempts log_ på samme side i Sanity.
+
+Webhooket oppdaterer blogginnlegg og arrangementer med en gang. Annet innhold, f.eks styremedlemmene på forsiden, kan bruke opptil en time på å dukke opp.
+
 ## Umami - Statistikk for nettsiden
 
 [Umami](https://github.com/umami-software/umami) er et alternativ til Google Analytics, som samler inn litt metadata om besøkende på [nettsiden](#uiogamingno---nettsiden). Er det noe vi trenger? Absolutt ikke! Men det er jo litt kult og interessant. Denne hoster vi selv i en [Docker](#docker---programvare-for-å-kjøre-applikasjoner) container så det er litt mer uskyldig enn å sende overvåkningsinfo til O' store Google.
