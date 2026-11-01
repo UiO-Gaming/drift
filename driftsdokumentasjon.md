@@ -217,6 +217,20 @@ Hosting av denne tjenesten gjøres ikke av oss, men man kan bli omdirigert til d
 
 [Kode](https://github.com/UiO-Gaming/uiogaming.no-backend)
 
+## Deploye endringer i Sanity Studio
+
+Sanity Studio, altså redigeringsgrensesnittet, hostes av Sanity på [uiogaming.sanity.studio](https://uiogaming.sanity.studio). I motsetning til de fleste andre tjenestene våre er det **ikke** satt opp [automatisk deployment](#automatisk-deployment) for denne. Endrer du noe i koden, f.eks legger til et nytt felt eller en ny innholdstype, må du deploye manuelt fra din egen maskin:
+
+```
+npm install
+npx sanity login
+npx sanity deploy
+```
+
+Siden vi bruker gratisversjonen av Sanity må du logge inn med UiO Gaming sin Google-konto når `npx sanity login` spør. Hvilket prosjekt og hvilken studio som deployes til er allerede satt i `sanity.cli.js`, så du blir ikke spurt om det.
+
+Merk at dette bare gjelder selve grensesnittet. Innhold som publiseres i Sanity trenger ingen deploy, da det hentes av nettsiden direkte. Se [Webhook fra Sanity](#webhook-fra-sanity).
+
 # Google Scripts
 
 Vi kjører et par "[Google Scripts](https://script.google.com/home/)", altså små programmer som integrerer med google-tjenester og kjører ved spesielle tilfeller. [Se egen dokumentasjon for de vi har kjørende](https://github.com/UiO-Gaming/drift/tree/main/google%20apps%20script).
