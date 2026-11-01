@@ -309,7 +309,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://docs.google.com/forms/d/e/1FAIpQLSePz7-lBfsveD0rsy_fX2umEKKcmFlW6kLvxA-sTdeBh2QaSg/viewform?usp=header;
+	return 302 https://docs.google.com/forms/d/e/1FAIpQLSePz7-lBfsveD0rsy_fX2umEKKcmFlW6kLvxA-sTdeBh2QaSg/viewform?usp=header;
 
 
     listen 443 ssl; # managed by Certbot
@@ -341,7 +341,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://docs.google.com/forms/d/e/1FAIpQLSfinPnTd993oEMH1Pu52lnP1LRcacGqegOfdP4-hHv1vASn1A/viewform;
+	return 302 https://docs.google.com/forms/d/e/1FAIpQLSfinPnTd993oEMH1Pu52lnP1LRcacGqegOfdP4-hHv1vASn1A/viewform;
 
 
     listen 443 ssl; # managed by Certbot
@@ -373,7 +373,7 @@ server {
 	# Global config
         include global/global.conf;
 
-	return 301 https://discord.gg/PqsgXbnds4;
+	return 302 https://discord.gg/PqsgXbnds4;
 
 
     listen 443 ssl; # managed by Certbot
