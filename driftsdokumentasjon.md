@@ -305,11 +305,15 @@ Her er et eksempel på hvordan du kobler deg til.
 
 Vedlikehold av servermaskinen går stort sett ut på å sørge for at ting holdes oppdatert. Det er satt opp automatiske sikkerhetsoppdateringer gjennom det som heter [unattended-upgrades](https://wiki.debian.org/UnattendedUpgrades), men dette gjelder bare operativsystemet og pakkene som kjører direkte på den.
 
-Derfor er det viktig å også oppdatere [Docker](#docker---programvare-for-å-kjøre-applikasjoner)-bildene som kjører på maskinen. Det kan gjøres slik:
+Derfor er det viktig å også oppdatere [Docker](#docker---programvare-for-å-kjøre-applikasjoner)-containerne som kjører på maskinen. Hvordan det gjøres kommer an på om applikasjonen er laget av oss eller av noen andre.
+
+**Applikasjoner andre har laget** (f.eks Umami, Postgres og Home Assistant) bruker ferdige bilder som lastes ned. Disse oppdateres slik:
 
 1. Beveg deg inn i mappen til applikasjonen som skal oppdateres
 2. Kjør `docker compose pull`
 3. Kjør `docker compose up -d`. Dette lager containerne på nytt med de nye bildene.
+
+**Applikasjoner vi har laget selv** (f.eks uiogaming.no, Mustafa og bebbes) bygges fra kildekoden med `build: .` i `docker-compose.yml`. Her gjør `docker compose pull` ingenting. De fleste av disse oppdateres av seg selv gjennom [automatisk deployment](#automatisk-deployment) hver gang noe pushes til _main_. Må du gjøre det manuelt kan du kjøre `git pull && docker compose up -d --build` i mappen til applikasjonen.
 
 Selv om automatiske sikkerhetsoppdateringer er på så kan det være lurt å kjøre `sudo apt update && sudo apt upgrade` til ymse tider. Merk deg at om Docker er en av pakkene som oppdateres her, så vil alle containere stoppe automatisk. Det bør fikses på slik at disse starter opp igjen automatisk.
 
