@@ -203,6 +203,26 @@ Et web-spill hvor man skal prøve å gjette seg fram til et satt antall UiO Game
 
 [Kode](https://github.com/UiO-Gaming/name-100-uio-gamers)
 
+## Tidligere og uferdige prosjekter
+
+Det ligger noen repoer på [GitHub](https://github.com/UiO-Gaming) som ikke er i bruk. Disse kjører **ikke** på servermaskinen, men er nevnt her så du ikke lurer på hva de er.
+
+### ShiteMusicBot
+
+Musikkbot for Discord som vi brukte så lenge Discord tillot det. Kjører ikke lenger.
+
+[Kode](https://github.com/UiO-Gaming/ShiteMusicBot)
+
+### mus
+
+Et system for registrering og betaling av medlemskap i UiO Gaming og DNS på samme sted, som også skulle holde medlemslisten i Galtinn oppdatert automatisk. Prosjektet ble aldri ferdig, og repoet er arkivert.
+
+[Kode](https://github.com/UiO-Gaming/mus)
+
+### stripe-webhook-api
+
+Se [hva som ble skrevet tidligere](#stripe-webhook-api-deprecated)
+
 # Domeneshop
 
 [Domeneshop](https://domene.shop) er der vi har registrert domenet vårt, _uiogaming.no_, hos. Det er også her vi administrerer domenet samt videresending av e-post som går dit.
