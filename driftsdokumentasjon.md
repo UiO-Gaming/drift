@@ -12,7 +12,7 @@ Det har noen sikkerhetsimplikasjoner å dele detaljer med hele internett, men je
 
 _Zyzz_ er vår egen servermaskin som står på PC-rommet vårt. Denne prøver vi å kjøre flest mulig tjenester på, sånn at vi er minst mulig avhengig av tredjeparter.
 
-Serveren kjører operativsystemet [Ubuntu 22.04](https://www.releases.ubuntu.com/22.04/) (Desktop-versjon). Grunnen til at man ikke har gått for server-versjon er at man ønsker et grafisk grensesnitt, da dette er lettere å håndtere for folk flest. I tillegg brukes serveren til å vise [infoskjermen](#Infoskjerm). Her er også grafisk grensesnitt nødvendig.
+Serveren kjører operativsystemet [Ubuntu 22.04](https://www.releases.ubuntu.com/22.04/) (Desktop-versjon). Grunnen til at man ikke har gått for server-versjon er at man ønsker et grafisk grensesnitt, da dette er lettere å håndtere for folk flest. I tillegg brukes serveren til å vise [infoskjermen](#infoskjerm). Her er også grafisk grensesnitt nødvendig.
 
 Serveren er koblet til en dedikert port på nettverksswitchen som står på kontoret. Denne switchen eies av [UiO nettdrift](https://www.usit.uio.no/om/organisasjon/iti/nettdrift/). EDB-gjengen har derimot i skrivende stund mulighet til å konfigurere denne. Konklusjonen er: ikke tukle med nettverksutstyr uten å spørre [EDB-gjengen](https://edb.neuf.no) først.
 
@@ -86,7 +86,7 @@ Greit å lese seg opp mer på egenhånd om man er usikker her.
 Følgende applikasjoner kjører ikke som en Docker-container i skrivende stund:
 
 - [Nginx](#nginx---ruting-av-nettrafikk)
-- [Spillservere](#Spillservere)
+- [Spillservere](#spillservere)
 
 ## Postgresql - Databasen
 
@@ -103,7 +103,7 @@ Backup av denne kjøres hver natt i cron job til mappa `/home/uiogaming/Document
 - Frontend
 - Backend
 
-Sistnevnte står det mer om [her](#Sanity).
+Sistnevnte står det mer om [her](#sanity).
 
 Nettsiden inkluderer et webhook API som gjør at nettsiden holder seg oppdatert med siste info når ting endrer seg i backend. Dette blir cachet derimot så det kan ta litt tid før det dukker opp.
 
@@ -188,7 +188,7 @@ Et web-spill hvor man skal prøve å gjette seg fram til et satt antall UiO Game
 
 [Domeneshop](https://domene.shop) er der vi har registrert domenet vårt, _uiogaming.no_, hos. Det er også her vi administrerer domenet samt videresending av e-post som går dit.
 
-Standard framgangsmåte for å lage et nytt subdomene er å lage en CNAME-record som peker til uiogaming.no. [Se guide](Hvordan%20%22lage%22%20et%20subdomene%2C%20f.eks%20yeet.uiogaming.no%3F)
+Standard framgangsmåte for å lage et nytt subdomene er å lage en CNAME-record som peker til uiogaming.no. [Se guide](#hvordan-lage-et-subdomene-feks-yeetuiogamingno)
 
 # Sanity
 
