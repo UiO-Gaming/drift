@@ -160,10 +160,9 @@ Discordbot laget av Mathias Morsund. Den tar seg om åpning og lukking av døren
 
 ## stripe-webhook-api (Deprecated)
 
-Denne tjenesten sender melding på discord når man har mottatt en betaling i [Stripe](https://stripe.com). Vi brukte dette for et par tilfeller i fortiden, men nå har vi en kortterminal man kan ta imot betaling på. Derfor er denne deprecated 
+Denne tjenesten sender melding på discord når man har mottatt en betaling i [Stripe](https://stripe.com). Vi brukte dette for et par tilfeller i fortiden, men nå har vi en kortterminal man kan ta imot betaling på. Derfor er denne deprecated
 
 [Kode](https://github.com/UiO-Gaming/stripe-webhook-api)
-
 
 ## Uptime-kuma - Statusnettside
 
@@ -310,7 +309,7 @@ Derfor er det viktig å også oppdatere [Docker](#docker---programvare-for-å-kj
 
 1. Beveg deg inn i mappen til applikasjonen som skal oppdateres
 2. Kjør `docker compose pull`
-3. Kjør `docker compose restart`
+3. Kjør `docker compose up -d`. Dette lager containerne på nytt med de nye bildene.
 
 Selv om automatiske sikkerhetsoppdateringer er på så kan det være lurt å kjøre `sudo apt update && sudo apt upgrade` til ymse tider. Merk deg at om Docker er en av pakkene som oppdateres her, så vil alle containere stoppe automatisk. Det bør fikses på slik at disse starter opp igjen automatisk.
 
