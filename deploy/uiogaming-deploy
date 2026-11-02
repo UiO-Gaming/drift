@@ -1,0 +1,44 @@
+#!/bin/bash
+# Deploy script for automatic deployment from GitHub Actions.
+#
+# Installed on the server as /usr/local/bin/uiogaming-deploy (owned by root, mode 755) and set as
+# the only command github_deploy's SSH key may run, in ~github_deploy/.ssh/authorized_keys:
+#   restrict,command="/usr/local/bin/uiogaming-deploy" ssh-ed25519 AAAA...
+#
+# The workflow runs `ssh github_deploy@uiogaming.no <service>`. SSH puts <service> in
+# SSH_ORIGINAL_COMMAND. The script updates that repo to origin/main and rebuilds the service
+# from the top-level docker-compose.yml, which owns all the containers.
+set -euo pipefail
+
+ROOT=/srv/uiogaming
+BRANCH=main
+
+# compose service name -> repo folder under $ROOT
+declare -A REPO=(
+    [bebbes]=bebbes
+    [mustaboard]=mustaboard
+    [mustafa]=mustafa
+    [name100]=name-100-uio-gamers
+    [uiogaming.no]=uiogaming.no
+)
+
+svc=${SSH_ORIGINAL_COMMAND:-}
+if [[ ! $svc =~ ^[a-z0-9.-]+$ || -z ${REPO[$svc]:-} ]]; then
+    echo "Usage: ssh github_deploy@uiogaming.no <service>" >&2
+    echo "Known services: ${!REPO[*]}" >&2
+    exit 1
+fi
+
+repo="$ROOT/${REPO[$svc]}"
+echo "==> Deploying $svc from $repo"
+
+git -C "$repo" fetch --quiet origin "$BRANCH"
+git -C "$repo" reset --hard "origin/$BRANCH"
+echo "==> Now at $(git -C "$repo" log -1 --format='%h %s')"
+
+cd "$ROOT"
+docker compose up -d --build "$svc"
+
+# Every build leaves the previous image behind; clean those up
+docker image prune -f >/dev/null
+echo "==> Done"

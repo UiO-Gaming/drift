@@ -94,7 +94,7 @@ Mange applikasjoner har behov for en database, og til det kjører vi en sentral 
 
 Når en ny tjeneste skal gis tilgang til databasen anbefaler jeg å lage en ny bruker som bare har tilgang til databasen den skal ha, samt minimale tilganger til denne.
 
-Backup av denne kjøres hver natt i cron job til mappa `/home/uiogaming/Documents/backups/postgres`. Denne mappa tas så backup av med _rsync_ til Leander Furumo sin personlige server off site. Dette gjøres gjennom brukeren `rsync`.
+Backup av alle databasene kjøres hver natt kl. 02:00 som en cron job. Scriptet som kjører er ([`backup/backup_db.sh`](backup/backup_db.sh) som ligger i `/srv/uiogaming/.backups/backup_db.sh` på maskinen. Backups havner i `/srv/uiogaming/.backups/postgres`. Backupene komprimeres og slettes fra servermaskinen etter 14 dager. Denne mappa tas så backup av med _rsync_ til Leander Furumo sin personlige server off site kl. 03:00. Dette gjøres gjennom brukeren `rsync`, som bare har lesetilgang til backupmappa.
 
 ## uiogaming.no - Nettsiden
 
@@ -270,7 +270,9 @@ I tillegg ligger det ymse andre ting som sakspapirer fra generalforsamlinger og 
 
 # Automatisk deployment
 
-Det er satt opp automatisk deployment for enkelte applikasjoner. Hver gang det pushes til _main_ branch på GitHub vil det kjøres en GitHub Action som logger seg på gjennom SSH og utfører kommandoene den trenger for å oppdatere tjenesten. Dette gjøres gjennom brukeren `github_deploy`.
+Det er satt opp automatisk deployment for enkelte applikasjoner. Hver gang det pushes til _main_ branch på GitHub vil det kjøres en GitHub Action som logger seg på gjennom SSH som brukeren `github_deploy` og kjører `ssh github_deploy@uiogaming.no <tjeneste>`.
+
+SSH-nøkkelen til `github_deploy` har bare lov til å kjøre scriptet [`deploy/uiogaming-deploy`](deploy/uiogaming-deploy), som ligger på servermaskinen som `/usr/local/bin/uiogaming-deploy`. Scriptet oppdaterer repoet til `origin/main` og bygger tjenesten på nytt med `docker compose up -d --build <tjeneste>` fra `/srv/uiogaming/docker-compose.yml`. Det er denne felles compose-fila som eier alle containerne, så `docker-compose.yml` i hvert enkelt repo brukes ikke av deploy. Deploy kan også kjøres manuelt fra _Actions_-fanen i repoet (_Run workflow_).
 
 I skrivende stund fungerer dette for følgende tjenester:
 
@@ -282,24 +284,23 @@ I skrivende stund fungerer dette for følgende tjenester:
 
 ## Secrets og variabler
 
-Workflowen (`.github/workflows/deploy.yml`) er lik i alle repoene og henter innloggingsinfo fra GitHub sine _secrets_ og _variables_. De fleste av disse er satt på organisasjonsnivå, under _Settings → Secrets and variables → Actions_ for [UiO-Gaming](https://github.com/UiO-Gaming), og deles av alle repoene:
+Workflowen (`.github/workflows/deploy.yml`) er lik i alle repoene bortsett fra tjenestenavnet på slutten av `ssh`-kommandoen. Innloggingsinfo hentes fra GitHub sine _secrets_ og _variables_ på organisasjonsnivå, under _Settings → Secrets and variables → Actions_ for [UiO-Gaming](https://github.com/UiO-Gaming), og deles av alle repoene:
 
-| Navn              | Type     | Nivå         | Innhold                                         |
-| ----------------- | -------- | ------------ | ----------------------------------------------- |
-| `SSH_PRIVATE_KEY` | Secret   | Organisasjon | Privat SSH-nøkkel for `github_deploy`           |
-| `SSH_USER`        | Secret   | Organisasjon | Brukernavnet, altså `github_deploy`             |
-| `SSH_HOST`        | Variable | Organisasjon | `uiogaming.no`                                  |
-| `MAIN_BRANCH`     | Variable | Organisasjon | `main`                                          |
-| `WORK_DIR`        | Secret   | Repo         | Mappen applikasjonen ligger i på servermaskinen |
+| Navn              | Type     | Nivå         | Innhold                               |
+| ----------------- | -------- | ------------ | ------------------------------------- |
+| `SSH_PRIVATE_KEY` | Secret   | Organisasjon | Privat SSH-nøkkel for `github_deploy` |
+| `SSH_USER`        | Secret   | Organisasjon | Brukernavnet, altså `github_deploy`   |
+| `SSH_HOST`        | Variable | Organisasjon | `uiogaming.no`                        |
 
-Den offentlige delen av SSH-nøkkelen ligger i `~/.ssh/authorized_keys` til `github_deploy` på servermaskinen. Byttes nøkkelen må begge stedene oppdateres, men bare én gang siden den deles av alle repoene.
+Den offentlige delen av SSH-nøkkelen ligger i `~/.ssh/authorized_keys` til `github_deploy` på servermaskinen, med `restrict,command="/usr/local/bin/uiogaming-deploy"` foran. Byttes nøkkelen må begge stedene oppdateres, men bare én gang siden den deles av alle repoene.
 
 Vil du sette opp automatisk deployment for et nytt repo:
 
-1. Kopier `deploy.yml` fra et av repoene over
-2. Legg til `WORK_DIR` som secret i det nye repoet
-3. Sjekk at organisasjonens secrets og variables er tilgjengelige for det nye repoet. De kan være begrenset til utvalgte repoer
-4. Sørg for at `github_deploy` har tilgang til mappen applikasjonen ligger i på servermaskinen, samt kan kjøre `git` og `docker` der
+1. Legg til tjenesten i `/srv/uiogaming/docker-compose.yml` og klon repoet til `/srv/uiogaming/<repo>`
+2. Legg til tjenesten i `REPO`-lista i [`deploy/uiogaming-deploy`](deploy/uiogaming-deploy), og kopier scriptet til `/usr/local/bin/uiogaming-deploy` på servermaskinen
+3. Kopier `deploy.yml` fra et av repoene over og bytt ut tjenestenavnet
+4. Sjekk at organisasjonens secrets og variables er tilgjengelige for det nye repoet. De kan være begrenset til utvalgte repoer
+5. Kjør `git config --global --add safe.directory /srv/uiogaming/<repo>` som `github_deploy`
 
 # Nyttige guider
 

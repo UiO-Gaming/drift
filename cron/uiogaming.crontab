@@ -1,0 +1,7 @@
+# Crontab for the uiogaming user on the server.
+# Install (replaces the whole crontab!):  crontab cron/uiogaming.crontab
+# Show what's installed:                  crontab -l
+
+# Nightly backup of all Postgres databases (see ../backup/backup_db.sh).
+# The rsync user pulls /srv/uiogaming/.backups off-site at 03:00, so this must finish before then.
+0 2 * * * /srv/uiogaming/.backups/backup_db.sh >> /srv/uiogaming/.backups/logs/backup.log 2>&1
