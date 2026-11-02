@@ -281,6 +281,7 @@ I skrivende stund fungerer dette for følgende tjenester:
 - [Mustafa](#mustafa---discord-bot)
 - [Mustaboard](#mustaboard)
 - [name-100-uio-gamers](#name-100-uio-gamers)
+- [Vedtekter](#oppdatere-vedtekter) (ingen container, les mer ved å trykke på lenken)
 
 ## Secrets og variabler
 
@@ -400,11 +401,9 @@ Kan være lurt å børste støv av maskinen en gang i blant :) (både inni og ut
 
 Vedtektsdokumentene er laget med LaTeX og finnes [her](https://github.com/UiO-Gaming/dokumenter/tree/main/styrende%20dokumenter/vedtekter). Jeg liker ikke helt filstrukturen her, men det er et forsøk på å skille mellom norsk og engelsk, samt hva som er gamle og gjeldende vedtekter.
 
-Fordi jeg er veldig nøye på metadata, som ingen egentlig bryr seg om, så foretrekker jeg å gjøre denne prosessen på egenhånd. Så lenge filnavnene som legges ut på GitHub er konsekvente derimot så er jeg fornøyd. Husk også å bruke datoen til den relevante generalforsamlingen på både forsiden samt filnavnene.
+Prosessen er automatisert. Oppdater LaTeX-kilden og datoen på forsiden (datoen til den relevante generalforsamlingen), og push til _main_. En GitHub Action arkiverer de gamle vedtektene, bygger nye PDF-er med riktig metadata og åpner en pull request. Se [README-en i dokumenter](https://github.com/UiO-Gaming/dokumenter/tree/main/styrende%20dokumenter/vedtekter) for detaljer.
 
-Jeg hadde tenkt til å lage et script som automatiserer denne prosessen, men per d.d har ikke dette skjedd.
-
-Vedtektsfilene som man finner på [vedtekter.uiogaming.no](https://vedtekter.uiogaming.no) og [statutes.uiogaming.no](https://statutes.uiogaming.no) ligger i `/var/www/uiogaming.no/vedtekter`. Merk at filene må hete `vedtekter.pdf` og `statutes.pdf` for å fungere.
+Når pull requesten merges, kjører workflowen `publiser-vedtekter.yml` (`ssh github_deploy@uiogaming.no vedtekter`). Deploy-scriptet oppdaterer `/srv/uiogaming/dokumenter` og kopierer de gjeldende vedtektene til `/var/www/uiogaming.no/vedtekter`, der [vedtekter.uiogaming.no](https://vedtekter.uiogaming.no) og [statutes.uiogaming.no](https://statutes.uiogaming.no) henter dem. Filene må hete `vedtekter.pdf` og `statutes.pdf` for å fungere, og det ordner scriptet.
 
 # Rutiner
 

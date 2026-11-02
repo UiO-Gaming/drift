@@ -7,7 +7,8 @@
 #
 # The workflow runs `ssh github_deploy@uiogaming.no <service>`. SSH puts <service> in
 # SSH_ORIGINAL_COMMAND. The script updates that repo to origin/main and rebuilds the service
-# from the top-level docker-compose.yml, which owns all the containers.
+# from the top-level docker-compose.yml, which owns all the containers. The vedtekter target has
+# no container: it copies the current statutes from the dokumenter repo to the folder nginx serves.
 set -euo pipefail
 
 ROOT=/srv/uiogaming
@@ -20,7 +21,10 @@ declare -A REPO=(
     [mustafa]=mustafa
     [name100]=name-100-uio-gamers
     [uiogaming.no]=uiogaming.no
+    [vedtekter]=dokumenter
 )
+
+STATUTES_DIR=/var/www/uiogaming.no/vedtekter
 
 svc=${SSH_ORIGINAL_COMMAND:-}
 if [[ ! $svc =~ ^[a-z0-9.-]+$ || -z ${REPO[$svc]:-} ]]; then
@@ -35,6 +39,24 @@ echo "==> Deploying $svc from $repo"
 git -C "$repo" fetch --quiet origin "$BRANCH"
 git -C "$repo" reset --hard "origin/$BRANCH"
 echo "==> Now at $(git -C "$repo" log -1 --format='%h %s')"
+
+if [[ $svc == vedtekter ]]; then
+    # nginx serves these two fixed names. Copy to a temporary file first so the swap is atomic
+    src="$repo/styrende dokumenter/vedtekter/gjeldende"
+    for pair in "vedtekter:Vedtekter UiO Gaming" "statutes:Statutes UiO Gaming"; do
+        name=${pair%%:*}
+        matches=("$src/${pair#*:} ("*" - ).pdf")
+        if [[ ${#matches[@]} -ne 1 || ! -f ${matches[0]} ]]; then
+            echo "Expected exactly one current PDF for ${pair#*:} in $src" >&2
+            exit 1
+        fi
+        install -m 644 "${matches[0]}" "$STATUTES_DIR/.$name.pdf.tmp"
+        mv -f "$STATUTES_DIR/.$name.pdf.tmp" "$STATUTES_DIR/$name.pdf"
+        echo "==> Published $(basename "${matches[0]}") as $name.pdf"
+    done
+    echo "==> Done"
+    exit 0
+fi
 
 cd "$ROOT"
 docker compose up -d --build "$svc"
