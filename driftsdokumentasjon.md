@@ -405,6 +405,11 @@ Prosessen er automatisert. Oppdater LaTeX-kilden og datoen på forsiden (datoen 
 
 Når pull requesten merges, kjører workflowen `publiser-vedtekter.yml` (`ssh github_deploy@uiogaming.no vedtekter`). Deploy-scriptet oppdaterer `/srv/uiogaming/dokumenter` og kopierer de gjeldende vedtektene til `/var/www/uiogaming.no/vedtekter`, der [vedtekter.uiogaming.no](https://vedtekter.uiogaming.no) og [statutes.uiogaming.no](https://statutes.uiogaming.no) henter dem. Filene må hete `vedtekter.pdf` og `statutes.pdf` for å fungere, og det ordner scriptet.
 
+Dette krever at servermaskinen er satt opp slik:
+
+- `dokumenter` er klonet til `/srv/uiogaming/dokumenter`, og `git config --global --add safe.directory /srv/uiogaming/dokumenter` er kjørt som `github_deploy`
+- `github_deploy` eier `/var/www/uiogaming.no/vedtekter` (`sudo chown -R github_deploy: /var/www/uiogaming.no/vedtekter`)
+
 # Rutiner
 
 - Endre passord for alle tjenester ved styrebytte
